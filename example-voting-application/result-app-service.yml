@@ -1,14 +1,14 @@
-apiversion: v1
-kind: service
+apiVersion: v1
+kind: Service
 metadata:
   name: result-app
   labels:
     name: result-app-service
     app: demo-voting-app
 spec:
-  ports:
-  - port: 80
-    targetPort: 80
   selector:
     name: result-app-pod
     app: demo-voting-app
+  ports:
+  - port: 80
+    targetPort: 80
